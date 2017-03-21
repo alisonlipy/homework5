@@ -11,7 +11,8 @@ ul > li {
 }
 body {
     font-family: sans-serif, Times New Roman;
-    text-align:center
+    text-align:center;
+	color: #f5f6f7;
 }
 
 div {
