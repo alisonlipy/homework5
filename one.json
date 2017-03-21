@@ -3,7 +3,7 @@
         "text": "2015年政府開支",
     },
     "tooltip" : {
-        "trigger": 'item',
+        "trigger": "item",
         "formatter": "{a} <br/>{b} : {c} ({d}%)"
     },
     "legend": {
@@ -12,7 +12,7 @@
         "data":["薪金、津貼及其他僱員福利","其他經營開支","經常性資助金","社會保障開支","折舊","非經常開支","利息開支","退休金的精算虧損","外匯基金虧損"]
     },
     "toolbox": {
-        show : true,
+        "show" : "true",
         "feature" : {
             "mark" : {show: true},
             "dataView" : {show: true, readOnly: false},
@@ -34,21 +34,21 @@
             "roseType" : 'radius',
             "label": {
                 "normal": {
-                    show: false
+                    "show": "false"
                 },
                 "emphasis": {
-                    show: true
+                    "show": "true"
                 }
             },
             "lableLine": {
                 "normal": {
-                    show: false
+                    "show": "false"
                 },
                 "emphasis": {
-                    show: true
+                    "show": "true"
                 }
             },
-            data:[
+            "data":[
                 {value:19.6, name:"薪金、津貼及其他僱員福利"},
                 {value:14.4, name:"其他經營開支"},
                 {value:25.8, name:"經常性資助金"},
