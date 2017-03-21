@@ -30,25 +30,25 @@
   body {
       font: 20px Montserrat, sans-serif;
       line-height: 1.8;
-      color: #f5f6f7;
+      color: #828282;
   }
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
   .bg-1 { 
       background-color: #1abc9c; /* Green */
-      color: #ffffff;
+      color: #828282;
   }
   .bg-2 { 
       background-color: #474e5d; /* Dark Blue */
-      color: #ffffff;
+      color: #828282;
   }
   .bg-3 { 
       background-color: #ffffff; /* White */
-      color: #555555;
+      color: #828282;
   }
   .bg-4 { 
       background-color: #2f2f2f; /* Black Gray */
-      color: #fff;
+      color: #d02c2c;
   }
   .container-fluid {
       padding-top: 70px;
@@ -73,18 +73,23 @@
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
       <a class="navbar-brand" href="#">香港政府財政狀況</a>
     </div>
   </div>
 </nav>
 	<!-- 2014 to 2016 overall -->
 <div class="row">
-<div id="overall style=height:600px;">
+<div id="overall" style=height:600px;>
 <div class="col-md-2 col-md-offset-3">
 <script type="text/javascript">
 option = {
     title : {
-        text: '2014年至2016年政府財政表現',
+        text: '2014年至2016年政府財政狀況',
         x:'center'
     },
     tooltip : {
@@ -96,7 +101,7 @@ option = {
     legend: {
 	x : 'center',
         y : 'bottom',
-        data:['虧損∕盈餘', '開支', '收入', '租金收入', '各項收費', '公用事業', '專利稅及特權稅', '其他經營收入', '地價收入', '資助自置居所計劃的淨收入', '利息及投資收入', '應佔政府企業利潤', '外匯基金盈餘', '其他經營開支', '經常性資助金', '社會保障開支', '折舊' , '非經常開支 ', '利息開支', '退休金的精算虧損', '外匯基金虧損']
+        data:['盈餘', '開支', '收入', '租金收入', '各項收費', '公用事業', '專利稅及特權稅', '其他經營收入', '地價收入', '資助自置居所計劃的淨收入', '利息及投資收入', '應佔政府企業利潤', '外匯基金盈餘', '其他經營開支', '經常性資助金', '社會保障開支', '折舊' , '非經常開支 ', '利息開支', '退休金的精算虧損', '外匯基金虧損']
 },
     grid: {
         left: '10%',
@@ -113,7 +118,7 @@ option = {
     yAxis : [
         {
             type : 'value',
-	    name: '港幣百萬元',
+	    name: '單位：港幣百萬元',
         }
     ],
     series : [
@@ -252,9 +257,9 @@ option = {
             data:[0, -10632, -70629]
         } ,
          {
-            name:'虧損∕盈餘',
+            name:'盈餘',
             type:'bar',
-            data:[38683, 69818, -18821],
+            data:[38683, 69818, 27686],
             markLine : {
                 lineStyle: {
                     normal: {
@@ -275,11 +280,7 @@ option = {
         </div>
 	</div>
 	<br>
-	<!-- First Container -->
-<div class="container-fluid bg-1 text-center">
-	<p>從上圖可見，2016年跟2015年的收入差不多，但盈餘卻少了近900億，更由盈轉虧，原因是開支大了很多。而且，這三年來，每年的開支都有上升。</p>
-	<p>現在，我們來仔細地看看，2015年跟2016年的開支相差在哪兒。</p>
-	</div>
+	<p>從上圖可見，2016年跟2015年的收入差不多，但盈餘卻少了311億多，原因正是開支方面大了很多。而且，這三年來，每年的開支都有上升。現在，我們來仔細地看看2015年跟2016年的開支相差在哪兒。<p>
  <!-- 2016 vs 2015 expenses -->
 <div class="row">
 <div id="expenses" style=height:500px;>
@@ -315,7 +316,7 @@ option = {
     calculable : true,
     series : [
         {
-            name:'2015年政府開支(港幣百萬元)',
+            name:'2015政府開支(港幣百萬元)',
             type:'pie',
             radius : [20, 110],
             center : ['25%', '50%'],
@@ -349,7 +350,7 @@ option = {
             ]
         },
         {
-            name:'2016年政府開支(港幣百萬元)',
+            name:'2016政府開支(港幣百萬元)',
             type:'pie',
             radius : [30, 110],
             center : ['75%', '50%'],
@@ -376,16 +377,14 @@ option = {
         </div>
 	</div>
 	<br>
-	<!-- Second Container -->
-	<div class="container-fluid bg-2 text-center">
-	<p>在2015年，佔開支最多的項目是「經常性資助金」；對比起2016年，「經常性資助金」仍然佔開支最多，但比例上卻大幅下降。但這並不代表政府投放在「經常性資助金」少了，如果看實際數字，你會發現2016年還比2015年投放多了約8億。</p>
+	<p>在2015年，佔開支最多的項目是「經常性資助金」；對比起2016年，「經常性資助金」仍然佔開支最多，但比例上卻大幅下降。但這並不代表政府投放在「經常性資助金」少了，如果看實際數字，你會發現2016年比2015年還投放多了約8億。</p>
 	<p>但是，由於2016年的「外匯基金虧損」比2015年的上升了近7倍，所以「外匯基金虧損」那一塊明顯地變大了很多。而且，其他開支項目也有些微增加，故此整體的開支便增加了很多，盈餘則大幅下跌了。</p>
-		</div>
-<!-- Footer -->
-<footer class="container-fluid bg-4 text-center">
+    <!-- Container (About Section) -->
+    <footer class="container-fluid text-center">
+        <span class="glyphicon glyphicon-chevron-up"></span>
         <p>JOUR 2106 Homework 5</p> 
         <p>by Alison Li</p>
-	<a href="https://data.gov.hk/tc-data/dataset/hk-try-tryaccrual-accrual-based-accounts"><p style="font-family:Arial">資料來源</p></a> 
+	<a href="https://data.gov.hk/tc-data/dataset/hk-try-tryaccrual-accrual-based-accounts"><p style="font-family:Arial; color:blue">資料來源</p></a> 
     </footer>
 </body>
 </html>
