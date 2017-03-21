@@ -65,6 +65,183 @@
   </style>
 </head>
 <body>
+	<!-- 2014 to 2016 overall -->
+<div class="row">
+<div id="expenses" style=height:500px;>
+<div class="col-md-2 col-md-offset-3">
+<script type="text/javascript">
+app.title = '堆叠柱状图';
+
+option = {
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    legend: {
+        data:['盈餘', '開支', '收入', '租金收入', '各項收費', '公用事業', '專利稅及特權稅', '其他經營收入', '地價收入', '資助自置居所計劃的淨收入', '利息及投資收入', '應佔政府企業利潤', '外匯基金盈餘', '其他經營開支', '經常性資助金', '社會保障開支', '折舊' , '非經常開支 ', '利息開支', '退休金的精算虧損', '外匯基金虧損']
+},
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'category',
+            data : ['2014','2015','2016']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'收入',
+            type:'bar',
+            data:[477649, 546419, 545481]
+        },
+        {
+            name:'稅項、差餉及應課稅品稅項 ',
+            type:'bar',
+            barWidth : 5,
+            stack: '收入',
+            data:[277418, 336568, 330610]
+        },
+        {
+            name:'租金收入 ',
+            type:'bar',
+            stack: '收入',
+            data:[24701, 28784, 30391]
+        },
+        {
+            name:'各項收費 ',
+            type:'bar',
+            stack: '收入',
+            data:[11920, 14530, 15093]
+        },
+        {
+            name:'公用事業',
+            type:'bar',
+            stack: '收入',
+            data:[3838, 3972, 4081]
+        },
+        {
+            name:'專利稅及特權稅 ',
+            type:'bar',
+            barWidth : 5,
+            stack: '收入',
+            data:[4430, 2900, 2954]
+        },
+        {
+            name:'其他經營收入 ',
+            type:'bar',
+            stack: '收入',
+            data:[7794, 6761, 6761]
+        },
+        {
+            name:'地價收入 ',
+            type:'bar',
+            stack: '收入',
+            data:[67851, 76554, 63333]
+        },
+        {
+            name:'資助自置居所計劃的淨收入',
+            type:'bar',
+            stack: '收入',
+            data:[2412, 2483, 2103]
+        },
+        {
+            name:'利息及投資收入',
+            type:'bar',
+            stack: '收入',
+            data:[46733, 45369, 53268]
+        },
+        {
+            name:'應佔政府企業利潤',
+            type:'bar',
+            stack: '收入',
+            data:[20979, 20979, 36011]
+       },
+        {
+            name:'外匯基金盈餘',
+            type:'bar',
+            stack: '收入',
+            data:[9573, 0, 0]
+       },
+        {
+            name:'開支',
+            type:'bar',
+            data:[-438966, -476601, -564302],
+        },
+        {
+            name:'薪金、津貼及其他僱員福利',
+            type:'bar',
+            barWidth : 5,
+            stack: '開支',
+            data:[-88697, -93315, -98287]
+        },
+       {
+            name:'其他經營開支 ',
+            type:'bar',
+            barWidth : 5,
+            stack: '開支',
+            data:[-79753, -68607, -81888]
+        },  {
+            name:'經常性資助金 ',
+            type:'bar',
+            barWidth : 5,
+            stack: '開支',
+            data:[-114381, -122797, -130759]
+        },  {
+            name:'社會保障開支 ',
+            type:'bar',
+            barWidth : 5,
+            stack: '開支',
+            data:[-36830, -36751, -38676]
+        },  {
+            name:'折舊' ,
+            type:'bar',
+            barWidth : 5,
+            stack: '開支',
+              data:[-11680, -12022, -13470]
+        },  {
+            name:'非經常開支 ',
+            type:'bar',
+            barWidth : 5,
+            stack: '開支',
+            data:[-66533, -52469, -58783]
+        },  {
+            name:'利息開支',
+            type:'bar',
+            barWidth : 5,
+            stack: '開支',
+            data:[-26850, -28004, -36031]
+        },  {
+            name:'退休金的精算虧損',
+            type:'bar',
+            barWidth : 5,
+            stack: '開支',
+            data:[-14242, -52004, -35779]
+        },  {
+            name:'外匯基金虧損',
+            type:'bar',
+            barWidth : 5,
+            stack: '開支',
+            data:[0, -10632, -70629]
+        } ,
+         {
+            name:'盈餘',
+            type:'bar',
+            data:[38683, 69818, 27686]
+        },
+    ]
+};
+
 
  <!-- 2016 vs 2015 expenses -->
 <div class="row">
