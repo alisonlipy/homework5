@@ -1,314 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <title>homework5</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="echarts.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	 <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-  <style>
-  body {
-      font: 400 15px Lato, sans-serif;
-      line-height: 1.8;
-      color: #818181;
-  }
-  h2 {
-      font-size: 24px;
-      text-transform: uppercase;
-      color: #303030;
-      font-weight: 600;
-      margin-bottom: 30px;
-  }
-  h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      color: #303030;
-      font-weight: 400;
-      margin-bottom: 30px;
-  }  
-  .jumbotron {
-      background-color: #f4511e;
-      color: #fff;
-      padding: 100px 25px;
-      font-family: Montserrat, sans-serif;
-  }
-  .container-fluid {
-      padding: 60px 50px;
-  }
-  .bg-grey {
-      background-color: #f6f6f6;
-  }
-  .logo-small {
-      color: #f4511e;
-      font-size: 50px;
-  }
-  .logo {
-      color: #f4511e;
-      font-size: 200px;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail img {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 10px;
-  }
-  .carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #f4511e;
-  }
-  .carousel-indicators li {
-      border-color: #f4511e;
-  }
-  .carousel-indicators li.active {
-      background-color: #f4511e;
-  }
-  .item h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 400;
-      font-style: italic;
-      margin: 70px 0;
-  }
-  .item span {
-      font-style: normal;
-  }
-  .panel {
-      border: 1px solid #f4511e; 
-      border-radius:0 !important;
-      transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-      border: 1px solid #f4511e;
-      background-color: #fff !important;
-      color: #f4511e;
-  }
-  .panel-heading {
-      color: #fff !important;
-      background-color: #f4511e !important;
-      padding: 25px;
-      border-bottom: 1px solid transparent;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-      background-color: white !important;
-  }
-  .panel-footer h3 {
-      font-size: 32px;
-  }
-  .panel-footer h4 {
-      color: #aaa;
-      font-size: 14px;
-  }
-  .panel-footer .btn {
-      margin: 15px 0;
-      background-color: #f4511e;
-      color: #fff;
-  }
-  .navbar {
-      margin-bottom: 0;
-      background-color: #f4511e;
-      z-index: 9999;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      border-radius: 0;
-      font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #f4511e !important;
-      background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-  }
-  footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #f4511e;
-  }
-  .slideanim {visibility:hidden;}
-  .slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
-      visibility: visible;
-  }
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-        font-size: 150px;
-    }
-  }
-  </style>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- Use echarts.js -->
+    <script src="echarts.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="My Skills Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <script src="js/jquery-1.11.1.min.js"></script>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      
-      <a class="navbar-brand" href="#myPage">香港政府財務狀況</a>
-    </div>
-  </div></nav>
+    <title>Homework 4 </title>    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12  col-sm-12 col-xs-12">
+                 <h1> E Chart Homework 5</h1>
+                      <h2> by John Poon </h2>
+              </div>
+          </div>
+        </div>
+    
 
+<body>
+	<div class="row">
 
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
-  <div class="row">   
-    <div class="col-sm-12">
-      <h2>跟你我有關</h2><br>
-      <h4>香港政府的財務狀況跟香港人息息相關，那麼最近三年來，政府的財務狀況是怎樣的呢？</h4><br>
-  
-	    <div class="container-fluid bg-1 text-center">
-	     <script type="text/javascript">   
-		     </div>
-		     </div>
-		     </div>
-		   
-		     
-		     option = {
-    title : {
-        text: '2015年政府開支',
-        x:'center'
+   <div id="born" style=height:500px;>
+       <div class="col-md-2 col-md-offset-3">
+<script type="text/javascript">
+option = {
+    title: {
+        text: '香港出生率'
     },
     tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+        trigger: 'axis'
     },
     legend: {
-        x : 'center',
-        y : 'bottom',
-        data:['薪金、津貼及其他僱員福利','其他經營開支','經常性資助金','社會保障開支','折舊','非經常開支','利息開支','退休金的精算虧損','外匯基金虧損']
+        data:['男嬰出生人數','女嬰出生人數','總出生人數']
     },
     toolbox: {
-        show : true,
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {
-                show: true,
-                type: ['pie', 'funnel']
-            },
-            restore : {show: true},
-            saveAsImage : {show: true}
+        feature: {
+            saveAsImage: {}
         }
     },
-    calculable : true,
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ['1961','1962','1963','1964','1965','1966','1967','1968','1969','1970','1971','1972','1973','1974','1975','1976','1977','1978','1979','1980','1981','1982','1983','1984','1985','1986','1987','1988','1989','1990','1991','1992','1993','1994','1995','1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
     series : [
         {
-            name:'政府開支',
-            type:'pie',
-            radius : [20, 110],
-            center : ['25%', '50%'],
-            roseType : 'radius',
-            label: {
-                normal: {
-                    show: false
-                },
-                emphasis: {
-                    show: true
-                }
-            },
-            lableLine: {
-                normal: {
-                    show: false
-                },
-                emphasis: {
-                    show: true
-                }
-            },
-            data:[
-                {value:19.6, name:'薪金、津貼及其他僱員福利'},
-                {value:14.4, name:'其他經營開支'},
-                {value:25.8, name:'經常性資助金'},
-                {value:7.7, name:'社會保障開支'},
-                {value:2.5, name:'折舊'},
-                {value:11, name:'非經常開支'},
-                {value:5.9, name:'利息開支'},
-                {value:10.9, name:'退休金的精算虧損'},
-                {value:2.2, name:'外匯基金虧損'}
-            ]
+            name:'男嬰出生人數',
+            type:'line',
+            stack: '总量',
+            areaStyle: {normal: {}},
+            data:[57361,58161,59064,55388,52029,47489,45668,42608,42480,40734,41096,41476,42417,42967,41535,40780,41333,41773,42352,44101,44610,44351,42836,39943,39296,36917,35979,39046,35815,35115,35197,36700,36505,37278,35566,32664,30880,27718,26712,28280,25160,24955,24406,25827,29880,34595,37448,41928,43966,47366,51286,48777,29806,32262,28660]
         },
         {
-            name:'面积模式',
-            type:'pie',
-            radius : [30, 110],
-            center : ['75%', '50%'],
-            roseType : 'area',
-            data:[
-                {value:19.6, name:'薪金、津貼及其他僱員福利'},
-                {value:14.4, name:'其他經營開支'},
-                {value:25.8, name:'經常性資助金'},
-                {value:7.7, name:'社會保障開支'},
-                {value:2.5, name:'折舊'},
-                {value:11, name:'非經常開支'},
-                {value:5.9, name:'利息開支'},
-                {value:10.9, name:'退休金的精算虧損'},
-                {value:2.2, name:'外匯基金虧損'}
-            ]
-        }
+            name:'女嬰出生人數',
+            type:'line',
+            stack: '总量',
+            areaStyle: {normal: {}},
+            data:[53523,54342,55486,52237,49081,44343,42547,40077,40002,38398,38693,38868,39835,40614,38255,37731,38689,39184,39623,41189,42141,41769,40457,37354,36830,34703,33979,36366,33806,32616,33084,34249,33946,34368,33071,30627,28370,25259,24569,25854,23059,23254,22559,23969,27218,31031,33427,36894,38129,41218,44165,42781,27278,30043,31218,
+]
+        },
+        {
+            name:'總出生人數',
+            type:'line',
+            stack: '总量',
+            areaStyle: {normal: {}},
+            data:[110884, 112503,114550,107625,101110,91832,88215,82685,82482,79132,79789,80344,82252,83581,79790,78511,80022,80957,81975,85290,86751,86120,83293,77297,76126,71620,69958,75412,69621,67731,68281,70949,70451,71646,68637,63291,59250,52977,51281,54134,48219,48209,46965,49796,57098,65626,70875,78822,82095,88584,95451,91558,57084,62305,59878,
+]
+        },
+        
     ]
 };
-	                var myChart1 = echarts.init(document.getElementById('about'));
+            var myChart1 = echarts.init(document.getElementById('born'));
             myChart1.setOption(option);
- </script>
+    </script>
+<!-- Container (About Section) -->
+
+	
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
   <p>JOUR 2106 Homework 3</p> 
             <p>by Alison Li</p> 
-            <a href="mailto:13211722@life.hkbu.edu.hk"><p style="font-family:Arial; color:purple">Contact me</p>
+            <a href="mailto:13211722@life.hkbu.edu.hk"><p style="font-family:Arial; color:purple">Contact me</p></a>
 </footer>
 </body>
 </html>
