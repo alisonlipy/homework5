@@ -241,7 +241,17 @@ option = {
          {
             name:'盈餘',
             type:'bar',
-            data:[38683, 69818, 27686]
+            data:[38683, 69818, 27686],
+            markLine : {
+                lineStyle: {
+                    normal: {
+                        type: 'dashed'
+                    }
+                },
+                data : [
+                    [{type : 'min'}, {type : 'max'}]
+                ]
+            }
         } ,
     ]
 };
