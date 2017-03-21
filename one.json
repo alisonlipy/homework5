@@ -1,51 +1,50 @@
  {
     title : {
-        text: '2015年政府開支',
-        x:'center'
+        text: "2015年政府開支",
     },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    "tooltip" : {
+        "trigger": 'item',
+        "formatter": "{a} <br/>{b} : {c} ({d}%)"
     },
-    legend: {
-        x : 'center',
-        y : 'bottom',
-        data:['薪金、津貼及其他僱員福利','其他經營開支','經常性資助金','社會保障開支','折舊','非經常開支','利息開支','退休金的精算虧損','外匯基金虧損']
+    "legend": {
+        "x" : 'center',
+        "y" : 'bottom',
+        "data":['薪金、津貼及其他僱員福利','其他經營開支','經常性資助金','社會保障開支','折舊','非經常開支','利息開支','退休金的精算虧損','外匯基金虧損']
     },
-    toolbox: {
+    "toolbox": {
         show : true,
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {
+        "feature" : {
+            "mark" : {show: true},
+            "dataView" : {show: true, readOnly: false},
+            "magicType" : {
                 show: true,
-                type: ['pie', 'funnel']
+                type: ["pie", "funnel"]
             },
-            restore : {show: true},
-            saveAsImage : {show: true}
+            "restore" : {show: true},
+            "saveAsImage" : {show: true}
         }
     },
     calculable : true,
     series : [
         {
-            name:'政府開支',
-            type:'pie',
-            radius : [20, 110],
-            center : ['25%', '50%'],
-            roseType : 'radius',
-            label: {
-                normal: {
+            "name":"政府開支",
+            "type":"pie",
+            "radius" : [20, 110],
+            "center" : ['25%', '50%'],
+            "roseType" : 'radius',
+            "label": {
+                "normal": {
                     show: false
                 },
-                emphasis: {
+                "emphasis": {
                     show: true
                 }
             },
-            lableLine: {
-                normal: {
+            "lableLine": {
+                "normal": {
                     show: false
                 },
-                emphasis: {
+                "emphasis": {
                     show: true
                 }
             },
@@ -62,12 +61,12 @@
             ]
         },
         {
-            name:'面积模式',
-            type:'pie',
-            radius : [30, 110],
-            center : ['75%', '50%'],
-            roseType : 'area',
-            data:[
+            "name":'面积模式',
+            "type":'pie',
+            "radius" : [30, 110],
+            "center" : ['75%', '50%'],
+            "roseType" : 'area',
+            "data":[
                 {value:19.6, name:'薪金、津貼及其他僱員福利'},
                 {value:14.4, name:'其他經營開支'},
                 {value:25.8, name:'經常性資助金'},
